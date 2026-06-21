@@ -1,17 +1,26 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+# --- Archivos generados por compilación Java (PC) ---
+*.class
+*.jar
+*.war
+*.ear
+
+# --- Carpetas de construcción de Android ---
+/build
+/app/build
+/.gradle
 /build
 /captures
 .externalNativeBuild
 .cxx
 
-# Script de automatizacion local
-gitAuto_2_0.sh
+# --- Configuración de Android Studio (IDE) ---
+.idea/
+*.iml
+local.properties
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+
+# --- TU CARPETA DE PRUEBAS ---
+/app/src/main/assets/archivos/
