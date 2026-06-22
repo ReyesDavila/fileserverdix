@@ -21,22 +21,31 @@ public class MonoServer {
 
     public static Orquestador orc;
 
+    // 1. Añade esta variable justo encima del main
+    public static ServerSocket serverSocket;
+
     public static void main(String[] args) throws Exception {
         String ip = getLocalIp();
         orc = new Orquestador(STORAGE_DIR, ip, PORT);
-        ServerSocket server = new ServerSocket(PORT);
+
+        // 2. Usar la variable estática aquí
+        serverSocket = new ServerSocket(PORT);
         System.out.println("--- Servidor Java activo en http://" + ip + ":" + PORT + " ---");
 
         while(true) {
-            final Socket client = server.accept();
-
-            // 2. En lugar de "new Thread", enviamos el cliente al ExecutorService
-            executor.submit(new Runnable() {
-                @Override
-                public void run() {
-                    handleClient(client);
-                }
-            });
+            try {
+                final Socket client = serverSocket.accept();
+                executor.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        handleClient(client);
+                    }
+                });
+            } catch (SocketException e) {
+                // Si el socket se cierra desde MainActivity, rompe el bucle para detener el servidor limpiamente
+                System.out.println("Servidor apagado.");
+                break;
+            }
         }
     }
 
