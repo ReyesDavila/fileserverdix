@@ -24,3 +24,11 @@ Thumbs.db
 
 # --- TU CARPETA DE PRUEBAS ---
 /app/src/main/assets/archivos/
+/app/src/main/assets/Ejecutar_en_pc.txt
+
+# --- El programa para hacer commits a github
+gitAuto_2_0.sh
+
+# --Listar archivos
+listar_archivos.py
+lista_de_archivos.txt
