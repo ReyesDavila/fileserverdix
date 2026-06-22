@@ -1,6 +1,10 @@
-# --- Archivos generados por compilación Java (PC) ---
+
+
+#--- Archivos generados por compilación Java (PC) ---
 *.class
 *.jar
+# Permitir el wrapper de Gradle
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
 
