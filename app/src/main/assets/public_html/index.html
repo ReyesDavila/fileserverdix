@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+<title>File Server Dix</title>
+<style type="text/css">
+body{background:#1a1a1a;color:#ffffff;margin:0;padding:0;font-family:Arial,sans-serif;}
+#header{background:#0a0a16;height:36px;line-height:32px;padding:0 0 0 8px;font-weight:bold;border-bottom:2px solid #333333;display:block;}
+#folder-icon{width:32px;height:32px;vertical-align:middle;margin-right:8px;}
+#header-text{vertical-align:middle;}
+#nav{padding:10px;text-align:center;background:#2a2a2a;}
+#nav a, .btn-label{color:#ffffff;text-decoration:none;padding:5px 15px;border:1px solid #555555;margin:0 5px;display:inline-block;cursor:pointer;background:transparent;font-size:12px;font-family:Arial,sans-serif;}
+#btn-borrar{background:#8b0000;}
+#input-subir{display:none;}
+#contenedor-info{text-align:center;padding:5px;color:#cccccc;font-size:12px;}
+#info-servidor{display:inline-block;padding:5px;}
+table{width:90%;max-width:800px;margin:0 auto 20px auto;border-collapse:collapse;background:#333333;table-layout:fixed;}
+th,td{border:1px solid #555555;padding:10px;text-align:left;overflow:hidden;word-wrap:break-word;}
+th{background:#444444;font-weight:bold;}
+.col-num{width:32px;text-align:center;}
+</style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<div id="header">
+<img id="folder-icon" src="./favicon.ico" alt="Icono">
+<span id="header-text">File Server Dix</span>
+</div>
+<div id="nav">
+<label for="input-subir" class="btn-label">Subir</label>
+<input type="file" id="input-subir" multiple>
+<a href="#" id="btn-bajar">Bajar</a>
+<a href="#" id="btn-borrar">Borrar</a>
+</div>
+<div id="contenedor-info">
+<div id="info-servidor"></div>
+</div>
+<table cellpadding="0" cellspacing="0" id="tabla-archivos">
+<tr>
+<th class="col-num" id="id-num">#</th>
+<th id="id-nombre">Nombre</th>
+<th id="id-fecha">Fecha</th>
+</tr>
+</table>
+
+<!--
+  DESCRIPCION DE ELEMENTOS PARA JAVASCRIPT:
+  - Input archivo: id="input-subir"
+  - Boton Bajar: id="btn-bajar"
+  - Boton Borrar: id="btn-borrar"
+  - Contenedor info servidor: id="info-servidor"
+  - Tabla de archivos: id="tabla-archivos"
+  - IDs de cabeceras: id="id-num", id="id-nombre", id="id-fecha"
+    Estructura de filas: tr con td correspondientes a columnas # (class="col-num"), Nombre y Fecha.
+    Color de fondo por defecto de las filas: #333333
+-->
+<script type="text/javascript" src="./gestor.js"></script>
+</body>
+</html>

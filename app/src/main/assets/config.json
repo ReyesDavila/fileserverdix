@@ -1,0 +1,8 @@
+{
+  "storage_dir": "./archivos",
+  "static_dir": "./public_html",
+  "selected_port": 8080,
+  
+  "storage_dir2": "/data/user/0/tu.paquete.app/files/archivos",
+  "static_dir2": "/data/user/0/tu.paquete.app/files/assets/public_html"
+}

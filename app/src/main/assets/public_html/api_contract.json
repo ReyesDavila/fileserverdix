@@ -1,0 +1,19 @@
+{
+  "version": "1.1",
+  "base_path": "/api",
+  "actions": {
+    "fetch": { "method": "POST" },
+    "upload": { "method": "POST" },
+    "download": { "method": "POST" },
+    "download_all": { "method": "POST" },
+    "check_status": { "method": "POST" },
+    "view": { "method": "POST" },
+    "delete": { "method": "POST" },
+    "delete_all": { "method": "POST" }
+  },
+  "file_disposition": {
+    "download_route": "/download/",
+    "view_route": "/view/",
+    "download_all_route": "/download_all/"
+  }
+}
