@@ -122,14 +122,15 @@ public class MainActivity extends AppCompatActivity {
     private void setButtonState(boolean conectado) {
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.OVAL);
-        if (conectado) {
-            shape.setColor(Color.parseColor("#4CAF50")); // Verde
-            btnToggle.setText("Conectado");
+        shape.setStroke(6, conectado ? Color.parseColor("#39FF14") : Color.parseColor("#8B0000")); // Borde (Neón verde o Rojo oscuro)
+        shape.setColor(conectado ? Color.parseColor("#1B301B") : Color.parseColor("#301B1B")); // Fondo oscuro
+
+        if (android.os.Build.VERSION.SDK_INT >= 16) {
+            btnToggle.setBackground(shape);
         } else {
-            shape.setColor(Color.parseColor("#F44336")); // Rojo
-            btnToggle.setText("Desconectado");
+            btnToggle.setBackgroundDrawable(shape);
         }
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) btnToggle.setBackground(shape);
-        else btnToggle.setBackgroundDrawable(shape);
+
+        btnToggle.setText(conectado ? "ON" : "OFF");
     }
 }
