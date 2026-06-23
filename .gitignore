@@ -7,6 +7,7 @@
 !gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
+*.sh
 
 # --- Carpetas de construcción de Android ---
 /build
